@@ -1,4 +1,4 @@
-# AegisApi
+# Aegis api project
 
 To start your Phoenix server:
 

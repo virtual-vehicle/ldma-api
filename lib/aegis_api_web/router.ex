@@ -18,6 +18,8 @@ defmodule AegisApiWeb.Router do
 
     get "/", PageController, :index
     get "api/v1/trips", TripController, :index
+    get "api/v1/measurements", MeasurementController, :index
+    get "api/v1/events", EventController, :index
   end
 
   # Other scopes may use custom stacks.

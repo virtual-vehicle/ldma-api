@@ -10,6 +10,13 @@ use Mix.Config
 config :aegis_api,
   ecto_repos: [AegisApi.Repo]
 
+config :aegis_api, AegisApi.Repo,
+  database: "tripdb",
+  username: "postgres",
+  password: "aegispass",
+  hostname: "localhost",
+  port: "17171"
+
 # Configures the endpoint
 config :aegis_api, AegisApiWeb.Endpoint,
   url: [host: "localhost"],

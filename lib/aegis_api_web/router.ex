@@ -17,6 +17,7 @@ defmodule AegisApiWeb.Router do
     pipe_through :browser
 
     get "/", PageController, :index
+    get "api/v1/trips", TripController, :index
   end
 
   # Other scopes may use custom stacks.

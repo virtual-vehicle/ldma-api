@@ -7,9 +7,9 @@ defmodule AegisApiWeb.Measurement do
 
     @primary_key false
     schema "measurement_t" do
+      belongs_to :trip_t, AegisApiWeb.Trip, foreign_key: :trip_id, references: :trip_id, define_field: false
       field :trip_id, :binary_id, primary_key: true
       field :measured_at, :naive_datetime, primary_key: true
-      belongs_to :trip_t, AegisApiWeb.Trip, foreign_key: :trip_id, references: :trip_id, define_field: false
       field :gps_position, Geo.PostGIS.Geometry
       field :gps_altitude, :decimal
       field :measured_after, :float

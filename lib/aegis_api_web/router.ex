@@ -15,11 +15,9 @@ defmodule AegisApiWeb.Router do
 
   scope "/api/v1" do
     pipe_through :browser
-
     resources "/trips", AegisApiWeb.TripController
     resources "/measurements", AegisApiWeb.MeasurementController
     resources "/events", AegisApiWeb.EventController
-
   end
 
   scope "/", AegisApiWeb do

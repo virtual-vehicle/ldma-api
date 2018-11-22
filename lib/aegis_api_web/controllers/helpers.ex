@@ -1,8 +1,7 @@
-defmodule Helper do
+defmodule AegisApiWeb.Helpers do
   @moduledoc """
   Contains functions for the controllers.
   """
-
 
   @doc """
   Showing nice json code.

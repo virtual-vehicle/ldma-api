@@ -3,6 +3,6 @@ defmodule AegisApiWeb.MeasurementController do
 
   def index(conn, _params) do
     measurements = AegisApiWeb.Measurement |> AegisApi.Repo.all
-    Helper.pretty_json(conn, measurements)
+    AegisApiWeb.Helpers.pretty_json(conn, measurements)
   end
 end

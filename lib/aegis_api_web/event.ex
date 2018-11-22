@@ -6,11 +6,11 @@ defmodule AegisApiWeb.Event do
 
   @primary_key {:event_id, :id, autogenerate: true}
   schema "event_t" do
+    belongs_to :trip_t, AegisApiWeb.Trip, foreign_key: :trip_id, references: :trip_id, define_field: false
     field :driver_id, :integer
     field :vehicle_id, :integer
     field :event_type, :string
     field :trip_id, :binary_id
-    belongs_to :trip_t, AegisApiWeb.Trip, foreign_key: :trip_id, references: :trip_id, define_field: false
     field :start_at, :naive_datetime
     field :start_after, :float
     field :start_position, Geo.PostGIS.Geometry

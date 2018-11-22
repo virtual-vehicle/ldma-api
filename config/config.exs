@@ -15,7 +15,9 @@ config :aegis_api, AegisApi.Repo,
   username: "postgres",
   password: "aegispass",
   hostname: "localhost",
-  port: "17171"
+  port: "17171",
+  adapter: Ecto.Adapters.Postgres,
+  types: AegisApiWeb.PostgresTypes
 
 # Configures the endpoint
 config :aegis_api, AegisApiWeb.Endpoint,
@@ -31,6 +33,9 @@ config :logger, :console,
 
 # Use Jason for JSON parsing in Phoenix
 config :phoenix, :json_library, Jason
+
+config :geo_postgis,
+  json_library: Poison # If you want to set your JSON module
 
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.

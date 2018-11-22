@@ -3,6 +3,6 @@ defmodule AegisApiWeb.EventController do
 
   def index(conn, _params) do
     events = AegisApiWeb.Event |> AegisApi.Repo.all
-    AegisApiWeb.Helpers.pretty_json(conn, events)
+    AegisApiWeb.Helper.pretty_json(conn, events)
   end
 end

@@ -3,6 +3,6 @@ defmodule AegisApiWeb.TripController do
 
   def index(conn, _params) do
     trips = AegisApiWeb.Trip |> AegisApi.Repo.all
-    AegisApiWeb.Helpers.pretty_json(conn, trips)
+    AegisApiWeb.Helper.pretty_json(conn, trips)
   end
 end

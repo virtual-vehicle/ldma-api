@@ -1,4 +1,4 @@
-defmodule AegisApiWeb.Helpers do
+defmodule AegisApiWeb.Helper do
   @moduledoc """
   Contains functions for the controllers.
   """

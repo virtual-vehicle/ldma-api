@@ -44,7 +44,8 @@ defmodule AegisApi.MixProject do
       {:jason, "~> 1.0"},
       {:plug_cowboy, "~> 2.0"},
       {:poison, "~> 3.1"},
-      {:geo_postgis, "~> 2.0"}
+      {:geo_postgis, "~> 2.0"},
+      {:bureaucrat, "~> 0.2.4"}
     ]
   end
 

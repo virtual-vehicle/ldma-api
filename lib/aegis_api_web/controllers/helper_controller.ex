@@ -1,4 +1,5 @@
 defmodule AegisApiWeb.Helper do
+  use AegisApiWeb, :controller
   @moduledoc """
   Contains functions for the controllers.
   """

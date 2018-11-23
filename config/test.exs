@@ -16,4 +16,4 @@ config :aegis_api, AegisApi.Repo,
   database: "tripdb",
   hostname: "localhost",
   pool: Ecto.Adapters.SQL.Sandbox,
-  port: 17171,
+  port: 17171

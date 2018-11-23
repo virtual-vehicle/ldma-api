@@ -12,11 +12,11 @@
 
 # deleting data
 # delete data from  Table "measurement_t"
-measurement= AegisApiWeb.Measurement |> AegisApi.Repo.all
+measurement = AegisApiWeb.Measurement |> AegisApi.Repo.all
 Enum.each(measurement, fn (measurement) -> AegisApi.Repo.delete(measurement) end)
 
 # delete data from  Table "event_t"
-event= AegisApiWeb.Event |> AegisApi.Repo.all
+event = AegisApiWeb.Event |> AegisApi.Repo.all
 Enum.each(event, fn (event) -> AegisApi.Repo.delete(event) end)
 
 # delete data from  Table "trip_t"

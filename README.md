@@ -28,5 +28,5 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## Database diagram
 
-![Image of database diagram](https://gitlab2.v2c2.at/CIS/aegis_api/blob/develop/dbdiagram/tripdb_schemas_diagram.png)
+You can look at diagram [here!](https://gitlab2.v2c2.at/CIS/aegis_api/raw/develop/dbdiagram/tripdb_schemas_diagram.png).
 

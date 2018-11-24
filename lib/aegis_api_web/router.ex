@@ -26,8 +26,4 @@ defmodule AegisApiWeb.Router do
     get "/", PageController, :index
   end
 
-  # Other scopes may use custom stacks.
-  # scope "/api", AegisApiWeb do
-  #   pipe_through :api
-  # end
 end

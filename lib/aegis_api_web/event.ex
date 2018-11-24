@@ -2,7 +2,7 @@ defmodule AegisApiWeb.Event do
   use Ecto.Schema
 
   @derive {Poison.Encoder, only: [:event_id, :start_at, :start_position, :end_after, :end_position, :duration, :event_details]} #choose data to be shown
-  @schema_prefix "event_data"
+  @schema_prefix "trip_data"
 
   @primary_key {:event_id, :id, autogenerate: true}
   schema "event_t" do

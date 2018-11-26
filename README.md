@@ -46,3 +46,6 @@ Then you can run tests with following command, which also updates API documentat
 
 You can look at API documentation [here](https://gitlab2.v2c2.at/CIS/aegis_api/blob/develop/docs/api-v1.md).
 
+## API Mocks Documentation
+
+You can look at API Mocks documentation [here](https://app.apiary.io/aegisproject).

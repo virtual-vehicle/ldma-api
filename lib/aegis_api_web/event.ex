@@ -7,7 +7,6 @@ defmodule AegisApiWeb.Event do
   @primary_key {:event_id, :id, autogenerate: true}
   schema "event_t" do
     belongs_to :trip_t, AegisApiWeb.Trip, foreign_key: :trip_id, references: :trip_id, define_field: false
-    belongs_to :driver_t, AegisApiWeb.Driver, foreign_key: :driver_id, references: :driver_id, define_field: false
     field :driver_id, :integer
     field :vehicle_id, :integer
     field :event_type, :string

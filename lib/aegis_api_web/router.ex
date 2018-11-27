@@ -18,6 +18,9 @@ defmodule AegisApiWeb.Router do
     resources "/trips", AegisApiWeb.TripController
     resources "/measurements", AegisApiWeb.MeasurementController
     resources "/events", AegisApiWeb.EventController
+    resources "/drivers", AegisApiWeb.DriverController
+
+
   end
 
   scope "/", AegisApiWeb do

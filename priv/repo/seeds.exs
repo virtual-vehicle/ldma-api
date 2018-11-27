@@ -28,6 +28,7 @@ Enum.each(trip, fn (trip) -> AegisApi.Repo.delete(trip) end)
 trips = [
   %AegisApiWeb.Trip{beagle_id: 1, vehicle_id: 1, driver_id: 1, start_position_name: "Graz", end_position_name: "Kragujevac", distance: 700.1, duration: 7.0, start_at: ~N[2000-01-01 23:00:07]},
   %AegisApiWeb.Trip{beagle_id: 2, vehicle_id: 2, driver_id: 2, start_position_name: "Kg", end_position_name: "Raca", distance: 32.3, duration: 0.30, start_at: ~N[2001-01-01 23:00:07]},
+  %AegisApiWeb.Trip{beagle_id: 2, vehicle_id: 2, driver_id: 2, start_position_name: "Bg", end_position_name: "Raca", distance: 32.3, duration: 0.30, start_at: ~N[2001-01-01 23:00:07]},
 ]
 Enum.each(trips, fn (trips) -> AegisApi.Repo.insert(trips) end)
 

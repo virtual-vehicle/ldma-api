@@ -6,6 +6,7 @@ defmodule AegisApiWeb.Trip do
 
     @primary_key {:trip_id, :binary_id, autogenerate: true}
     schema "trip_t" do
+      belongs_to :driver_t, AegisApiWeb.Driver, foreign_key: :driver_id, references: :driver_id, define_field: false
       field :beagle_id, :integer
       field :vehicle_id, :integer
       field :driver_id, :integer

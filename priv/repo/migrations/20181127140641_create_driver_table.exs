@@ -1,4 +1,5 @@
-defmodule AegisApi.Repo.Migrations.CreateDriver do
+
+defmodule AegisApi.Repo.Migrations.CreateDriverTable do
   use Ecto.Migration
   use Ecto.Schema
   import Ecto.Query, only: [from: 2]

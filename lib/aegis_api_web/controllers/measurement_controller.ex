@@ -7,8 +7,8 @@ defmodule AegisApiWeb.MeasurementController do
   end
 
   def show(conn, %{"id" => measured_at}) do
-    trip = AegisApiWeb.Measurement |> AegisApi.Repo.get_by(measured_at: measured_at)
-    AegisApiWeb.Helper.pretty_json(conn, trip)
+    measurement = AegisApiWeb.Measurement |> AegisApi.Repo.get_by(measured_at: measured_at)
+    AegisApiWeb.Helper.pretty_json(conn, measurement)
   end
 
 end

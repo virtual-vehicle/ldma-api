@@ -16,6 +16,10 @@ Aegis API is Phoenix Elixir backend project, which is fetching data from aeigs d
 
 `mix ecto.setup`
 
+## Run migrations
+
+`mix ecto.migrate`
+
 ## Start the project
 
 `mix phx.server`

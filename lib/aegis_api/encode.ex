@@ -1,6 +1,6 @@
 defimpl Poison.Encoder, for: Any do
   def encode(%{__struct__: App.Models.Task} = struct, options) do
-  struct =
+    struct =
       if struct.geom do
           {lon, lat} =  struct.geom.coordinates
           %{struct | lon: lon, lat: lat}

@@ -2,7 +2,7 @@
 defmodule AegisApiWeb.Measurement do
     use Ecto.Schema
 
-    @derive {Poison.Encoder, only: [:measured_at, :acceleration_x, :acceleration_y, :engine_oil_temp_5c, :fuel_tank_level_2f]} #choose data to be shown
+    @derive {Poison.Encoder, only: [:measured_at, :trip_id, :acceleration_x, :gps_altitude, :acceleration_y, :engine_oil_temp_5c, :fuel_tank_level_2f]} #choose data to be shown
     @schema_prefix "trip_data"
 
     @primary_key false
@@ -10,7 +10,7 @@ defmodule AegisApiWeb.Measurement do
       belongs_to :trip_t, AegisApiWeb.Trip, foreign_key: :trip_id, references: :trip_id, define_field: false
       field :trip_id, :binary_id, primary_key: true
       field :measured_at, :naive_datetime, primary_key: true
-      field :gps_position, Geo.PostGIS.Geometry
+      #field :gps_position, Geo.PostGIS.Geometry
       field :gps_altitude, :decimal
       field :measured_after, :float
       field :acceleration_x, :float

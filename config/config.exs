@@ -16,6 +16,9 @@ config :aegis_api, AegisApi.Repo,
   password: "aegispass",
   hostname: "localhost",
   port: "17171",
+  pool_size: 8,
+  pool_timeout: 100000,
+  timeout: 100000,
   adapter: Ecto.Adapters.Postgres,
   types: AegisApiWeb.PostgresTypes
 

@@ -13,13 +13,13 @@ defmodule AegisApiWeb.Event do
     field :trip_id, :binary_id
     field :start_at, :naive_datetime
     field :start_after, :float
-    field :start_position, Geo.PostGIS.Geometry
+    #field :start_position, Geo.PostGIS.Geometry
     field :start_altitude, :decimal
     field :end_at, :naive_datetime
     field :end_after, :float
-    field :end_position, Geo.PostGIS.Geometry
+    # field :end_position, Geo.PostGIS.Geometry
     field :end_altitude, :decimal
-    field :marker_position, Geo.PostGIS.Geometry
+    # field :marker_position, Geo.PostGIS.Geometry
     field :duration, :float
     field :event_details, :map
   end

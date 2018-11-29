@@ -2,7 +2,7 @@
 defmodule AegisApiWeb.Measurement do
     use Ecto.Schema
 
-    @derive {Poison.Encoder, only: [:measured_at, :acceleration_x, :acceleration_y, :engine_oil_temp_5c, :fuel_tank_level_2f]} #choose data to be shown
+    @derive {Poison.Encoder, only: [:measured_at, :trip_id, :gps_position, :acceleration_x, :gps_altitude, :acceleration_y, :engine_oil_temp_5c, :fuel_tank_level_2f]} #choose data to be encode
     @schema_prefix "trip_data"
 
     @primary_key false

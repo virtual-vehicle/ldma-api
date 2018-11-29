@@ -1,7 +1,7 @@
 defmodule AegisApiWeb.Trip do
     use Ecto.Schema
 
-    @derive {Poison.Encoder, only: [:trip_id, :start_position_name, :end_position_name, :distance, :duration, :start_at]} #choose data to be shown
+    @derive {Poison.Encoder, only: [:trip_id, :beagle_id, :vehicle_id, :driver_id, :start_position_name, :end_position_name, :distance, :duration, :start_at]} #choose data to be shown
     @schema_prefix "trip_data"
 
     @primary_key {:trip_id, :binary_id, autogenerate: true}

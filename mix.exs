@@ -46,10 +46,7 @@ defmodule AegisApi.MixProject do
       {:poison, "~> 3.1"},
       {:geo_postgis, "~> 2.0"},
       {:geo, "~> 3.0"},
-      {:bureaucrat, "~> 0.2.4"},
-      # {:comeonin, "~> 4.0"},
-      # {:bcrypt_elixir, "~> 0.12"},
-      # {:guardian, "~> 1.0"}
+      {:bureaucrat, "~> 0.2.4"}
     ]
   end
 

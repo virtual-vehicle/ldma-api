@@ -19,15 +19,6 @@ defmodule AegisApiWeb.Router do
   end
 
   scope "/api/v1", AegisApiWeb do
-    pipe_through :browser
-
-    # resources "/trips", TripController
-    # resources "/measurements", MeasurementController
-    # resources "/events", EventController
-    # resources "/drivers", DriverController
-  end
-
-  scope "/api/v1", AegisApiWeb do
     pipe_through :api
 
     post "/sign_in", DriverController, :sign_in

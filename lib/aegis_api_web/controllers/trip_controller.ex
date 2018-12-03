@@ -7,11 +7,6 @@ defmodule AegisApiWeb.TripController do
     AegisApiWeb.Helper.pretty_json(conn, trips)
   end
 
-  # def show(conn, %{"id" => id}) do
-  #   trip = AegisApiWeb.Trip |> AegisApi.Repo.get_by(trip_id: id)
-  #   AegisApiWeb.Helper.pretty_json(conn, trip)
-  # end
-
   def show(conn, _params) do
     driver = Guardian.Plug.current_resource(conn)
     trips = from(t in AegisApiWeb.Trip, where: t.driver_id == ^driver.driver_id, select: t)|> AegisApi.Repo.all()

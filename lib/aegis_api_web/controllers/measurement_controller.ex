@@ -7,12 +7,6 @@ defmodule AegisApiWeb.MeasurementController do
     AegisApiWeb.Helper.pretty_json(conn, measurements)
   end
 
-  # def show(conn, %{"id" => trip_id}) do
-  #   measurement = from(m in AegisApiWeb.Measurement, where: m.trip_id == ^trip_id, select: m, distinct: true)
-  #   |> AegisApi.Repo.all()
-  #   AegisApiWeb.Helper.pretty_json(conn, measurement)
-  # end
-
   def show(conn, _params) do
     driver = Guardian.Plug.current_resource(conn)
     measurements = from(m in AegisApiWeb.Measurement, join: t in AegisApiWeb.Trip, on: m.trip_id == t.trip_id, where: t.driver_id == ^driver.driver_id, select: m) |> AegisApi.Repo.all()

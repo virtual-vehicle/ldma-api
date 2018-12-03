@@ -1,5 +1,6 @@
 defmodule AegisApiWeb.Router do
   use AegisApiWeb, :router
+  alias AegisApi.Guardian
 
   pipeline :browser do
     plug :accepts, ["html"]
@@ -13,12 +14,32 @@ defmodule AegisApiWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/api/v1" do
+  pipeline :jwt_authenticated do
+    plug Guardian.AuthPipeline
+  end
+
+  scope "/api/v1", AegisApiWeb do
     pipe_through :browser
-    resources "/trips", AegisApiWeb.TripController
-    resources "/measurements", AegisApiWeb.MeasurementController
-    resources "/events", AegisApiWeb.EventController
-    resources "/drivers", AegisApiWeb.DriverController
+
+    # resources "/trips", TripController
+    # resources "/measurements", MeasurementController
+    # resources "/events", EventController
+    # resources "/drivers", DriverController
+  end
+
+  scope "/api/v1", AegisApiWeb do
+    pipe_through :api
+
+    post "/sign_in", DriverController, :sign_in
+  end
+
+  scope "/api/v1", AegisApiWeb do
+    pipe_through [:api, :jwt_authenticated]
+
+    get "/trips", TripController, :show
+    get "/measurements", MeasurementController, :show
+    get "/events", EventController, :show
+    get "/drivers", DriverController, :show
   end
 
   scope "/", AegisApiWeb do

@@ -40,6 +40,11 @@ config :phoenix, :json_library, Jason
 config :geo_postgis,
   json_library: Poison # If you want to set your JSON module
 
+# Configures Guardian
+config :aegis_api, AegisApi.Guardian,
+  issuer: "AegisApi",
+  secret_key: "8YHb8bCz9gbHunuanQ43jU+MWADV8R2hO5zE6GxukQylMmLTwjf7xTlyGCrVEm5T"
+
 # Import environment specific config. This must remain at the bottom
 # of this file so it overrides the configuration defined above.
 import_config "#{Mix.env()}.exs"

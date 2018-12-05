@@ -10,7 +10,9 @@ defmodule AegisApi.MixProject do
       compilers: [:phoenix, :gettext] ++ Mix.compilers(),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      test_coverage: [tool: ExCoveralls],
+      preferred_cli_env: [coveralls: :test, "coveralls.detail": :test, "coveralls.post": :test, "coveralls.html": :test]
     ]
   end
 
@@ -49,7 +51,8 @@ defmodule AegisApi.MixProject do
       {:bureaucrat, "~> 0.2.4"},
       {:comeonin, "~> 4.0"},
       {:bcrypt_elixir, "~> 0.12"},
-      {:guardian, "~> 1.0"}
+      {:guardian, "~> 1.0"},
+      {:excoveralls, "~> 0.10", only: :test},
     ]
   end
 

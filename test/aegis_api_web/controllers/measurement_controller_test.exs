@@ -1,3 +1,4 @@
+# commented because of timeout running; in the future we can enhance fetching data (join of tables) if it is necessary
 # defmodule AegisApiWeb.MeasurementControllerTest do
 #   use AegisApiWeb.ConnCase
 #   import AegisApi.HelperTest

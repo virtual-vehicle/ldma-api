@@ -13,7 +13,6 @@ defmodule AegisApiWeb.Driver do
     field :username, :string
     field :password_hash, :string
     field :password, :string, virtual: true
-    # field :password_confirmation, :string, virtual: true
   end
 
   @doc false
@@ -30,7 +29,6 @@ defmodule AegisApiWeb.Driver do
     case changeset do
       %Ecto.Changeset{valid?: true, changes: %{password: pass}} ->
         put_change(changeset, :password_hash, hashpwsalt(pass))
-
       _ ->
         changeset
     end
@@ -40,7 +38,6 @@ defmodule AegisApiWeb.Driver do
     case driver_password_auth(username, password) do
       {:ok, driver} ->
         Guardian.encode_and_sign(driver)
-
       _ ->
         {:error, :unauthorized}
     end
@@ -48,8 +45,8 @@ defmodule AegisApiWeb.Driver do
 
   defp driver_password_auth(username, password)
        when is_binary(username) and is_binary(password) do
-    with {:ok, driver} <- get_by_username(username),
-         do: verify_password(password, driver)
+        with {:ok, driver} <- get_by_username(username),
+          do: verify_password(password, driver)
   end
 
   defp get_by_username(username) when is_binary(username) do
@@ -57,7 +54,6 @@ defmodule AegisApiWeb.Driver do
       nil ->
         dummy_checkpw()
         {:error, "Login error."}
-
       driver ->
         {:ok, driver}
     end

@@ -12,7 +12,7 @@ defmodule AegisApi.Repo.Migrations.PopulateDriverTable do
         driver = %AegisApiWeb.Driver{
           driver_id: id,
           username: Integer.to_string(id),
-          password: "pass"
+          password_hash: Comeonin.Bcrypt.hashpwsalt("password")
         }
 
         AegisApi.Repo.insert!(driver)

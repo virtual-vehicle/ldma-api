@@ -6,11 +6,17 @@ defmodule AegisApiWeb.DriverController do
     AegisApiWeb.Helper.pretty_json(conn, drivers)
   end
 
-  def show(conn, %{"id" => id}) do
-    driver = AegisApiWeb.Driver |> AegisApi.Repo.get_by(driver_id: id)
+  def show(conn, _params) do
+    driver = Guardian.Plug.current_resource(conn)
     AegisApiWeb.Helper.pretty_json(conn, driver)
   end
 
-  # ecto cheatsheet
-  # https://devhints.io/phoenix-ecto
+  def sign_in(conn, %{"username" => username, "password" => password}) do
+    case AegisApiWeb.Driver.token_sign_in(username, password) do
+      {:ok, token, _claims} ->
+        conn |> render("jwt.json", jwt: token, username: username)
+      _ ->
+        {:error, :unauthorized}
+    end
+  end
 end

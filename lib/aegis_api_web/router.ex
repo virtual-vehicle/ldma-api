@@ -31,6 +31,7 @@ defmodule AegisApiWeb.Router do
     get "/measurements", MeasurementController, :show
     get "/events", EventController, :show
     get "/drivers", DriverController, :show
+    get "/rankings", RankingController, :show
   end
 
   scope "/", AegisApiWeb do

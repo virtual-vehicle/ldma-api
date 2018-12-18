@@ -23,7 +23,7 @@ services:
     
   processor:
     build:
-      context: ../TripEventDatabase
+      context: ./trip-event-database
     # restart: unless-stopped
     environment:
       POSTGRES_PASSWORD: postgres
@@ -41,8 +41,8 @@ services:
       POSTGRES_DB: tripdb
     command: postgres -c config_file=/etc/postgresql.conf
     volumes:
-      - ../TripEventDatabase/PostgresConfig/postgres_init:/docker-entrypoint-initdb.d/
-      - ../TripEventDatabase/PostgresConfig/postgresql.conf:/etc/postgresql.conf
+      - ./trip-event-database/PostgresConfig/postgres_init:/docker-entrypoint-initdb.d/
+      - ./trip-event-database/PostgresConfig/postgresql.conf:/etc/postgresql.conf
       - db_datadir:/var/lib/postgresql/data
     networks:
        - backend

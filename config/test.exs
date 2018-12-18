@@ -12,8 +12,8 @@ config :logger, level: :warn
 # Configure your database
 config :aegis_api, AegisApi.Repo,
   username: "postgres",
-  password: "aegispass",
+  password: "postgres",
   database: "tripdb",
-  hostname: "localhost",
+  hostname: "tripeventdb",
   pool: Ecto.Adapters.SQL.Sandbox,
-  port: 17171
+  port: 5432

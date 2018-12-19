@@ -32,5 +32,6 @@ RUN mix deps.compile
 # Compile the entire project
 RUN mix compile
 
+# Run the entry file, which checks if the driver_t table exists 
 RUN chmod +x ./docker-entrypoint.sh
 ENTRYPOINT ["./docker-entrypoint.sh"]

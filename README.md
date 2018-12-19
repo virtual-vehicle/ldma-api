@@ -1,6 +1,6 @@
-# Aegis api project
+# LDMA api project
 
-Aegis API is Phoenix Elixir backend project, which is fetching data from aeigs database and providing RESTful APIs.
+LDMA API is Phoenix Elixir backend project, which is fetching data from aeigs database and providing RESTful APIs.
 
 ## Install dependencies
 
@@ -65,6 +65,18 @@ First you need to set the environment variable
 
 Then you can run following command to show coverage information, which also updates API documentation
 
-`mix coveralls `
+`mix coveralls`
 
 You can look at ExCoveralls documentation [here](https://github.com/parroty/excoveralls).
+
+## Docker
+
+# Building Docker Images with Dockerfiles
+
+`docker-compose build`
+
+# Builds, (re)creates, starts, and attaches to containers for a service
+
+Linked services will be started, unless they are already running.
+
+`docker-compose up`

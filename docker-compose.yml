@@ -1,0 +1,57 @@
+version: '3'
+services:
+  phoenix:
+    build:
+     context: .
+    environment:
+      # Variables to connect to our Postgres server
+      PGUSER: postgres
+      PGPASSWORD: postgres
+      PGDATABASE: tripdb
+      PGPORT: 5432
+      # Hostname of our Postgres container
+      PGHOST: tripeventdb
+    ports:
+      # Mapping the port to make the Phoenix app accessible outside of the container
+      - "4000:4000"
+    depends_on:
+      - tripeventdb
+    volumes:
+      - .:/usr/src/app
+    networks:
+       - backend
+    
+  processor:
+    build:
+      context: ./trip-event-database
+    # restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: postgres
+    depends_on:
+      # The db container needs to be started before we start this container
+      - tripeventdb
+    networks:
+      - backend
+      
+  tripeventdb:
+    image: timescale/timescaledb-postgis:latest-pg10
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: tripdb
+    command: postgres -c config_file=/etc/postgresql.conf
+    volumes:
+      - ./trip-event-database/PostgresConfig/postgres_init:/docker-entrypoint-initdb.d/
+      - ./trip-event-database/PostgresConfig/postgresql.conf:/etc/postgresql.conf
+      - db_datadir:/var/lib/postgresql/data
+    networks:
+       - backend
+    ports: 
+      - 17171:5432
+   
+volumes:
+  db_datadir:
+
+networks:
+     backend:
+      driver: bridge

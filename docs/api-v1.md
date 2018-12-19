@@ -15,7 +15,7 @@
 * __Path:__ /api/v1/events
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU0NjQzNzEwOSwiaWF0IjoxNTQ0MDE3OTA5LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6IjdmN2ZjNWRkLTI2NDctNGFhNy04YmM5LTkxMzhlZTY3OWU3OSIsIm5iZiI6MTU0NDAxNzkwOCwic3ViIjoiNSIsInR5cCI6ImFjY2VzcyJ9.H2rbfwgf3yeWq6NxxdhV6ZN69zgrAyyvoyF2SmwINHkWdlwbEntf7CnjXXi0WrC8SDUNuzGDGMABeyxZGmbMqg
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU0NjQyMTQ1MiwiaWF0IjoxNTQ0MDAyMjUyLCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImJjODc2OGY3LWVmMTAtNDdjNS1iY2NkLTBkZmQ5NWI2NGQ4YiIsIm5iZiI6MTU0NDAwMjI1MSwic3ViIjoiNSIsInR5cCI6ImFjY2VzcyJ9.0BK3XOi0v8LwxjwwHGhes1N1V83USpugETMInbH6ufxkul8QF7ZlwerUUVoxdHUDa68Kt0AmpylR5aib9LhGNQ
 ```
 
 ##### Response
@@ -23,7 +23,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2lmn86sqtd8818rtus0003o2
+x-request-id: 2lmmbnh8b33g0j5u3k0008j3
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__
@@ -124383,7 +124383,7 @@ content-type: application/json; charset=utf-8
 * __Path:__ /api/v1/rankings
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU0NjQzNzEwOCwiaWF0IjoxNTQ0MDE3OTA4LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6IjIzYWY5NTBhLTU1M2EtNDUxNy1iNzQyLTlkMzJhY2MxMGE2OCIsIm5iZiI6MTU0NDAxNzkwNywic3ViIjoiNSIsInR5cCI6ImFjY2VzcyJ9.ZYJ6A_W1lc0WtsuzjtAPECJsdQEiVsqQ8lKdlTOLaRTQErordR2Db9aR7R-eGucVxk872d8uAn33j1LaQaWy-A
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU0NjQyMTQ1MywiaWF0IjoxNTQ0MDAyMjUzLCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImRkMzZhNzhmLWViN2EtNGNkNS1iZWViLTAxNjQ4MjQ3NTg2MCIsIm5iZiI6MTU0NDAwMjI1Miwic3ViIjoiNSIsInR5cCI6ImFjY2VzcyJ9.y-_h_VLCncVLMdiDvPrCPoXWlYtiC_iw3jvdBpi7KUqbBqv68QD_nkfHtX1AD3vMmftwWEg2E2xPUG_H_fzm_Q
 ```
 
 ##### Response
@@ -124391,7 +124391,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2lmn86ru287o1cshd00006a1
+x-request-id: 2lmmbnjuuf641b7sos000ci2
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__
@@ -124422,7 +124422,7 @@ content-type: application/json; charset=utf-8
 * __Path:__ /api/v1/trips
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU0NjQzNzExMCwiaWF0IjoxNTQ0MDE3OTEwLCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImU3ZjQ4MmFkLTc2N2MtNDRlYy1hNTQxLTQzNDE1OTM4MzdmNyIsIm5iZiI6MTU0NDAxNzkwOSwic3ViIjoiNSIsInR5cCI6ImFjY2VzcyJ9.ZRAzyYQe5ZTheAT5Iik7uLmwiGuFZ2rbsqSKgzJiVO8V5KSJ76HWEorRhMBXLlZjOWPISYd05lAWIqLQJ-P9EA
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU0NjQyMTQ1MywiaWF0IjoxNTQ0MDAyMjUzLCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImVlYmEzYWVmLTFmMDgtNGRiNy1iYWU1LWE2ZjdlN2QyMzRjZiIsIm5iZiI6MTU0NDAwMjI1Miwic3ViIjoiNSIsInR5cCI6ImFjY2VzcyJ9.mVqQm4uxRVIKRE3loacojFTCipY0eumnXN5Nj9BTLX3UqMdk5u83QD4GSPq4LijHnVMoF8yP7jBsTv4dcg9TyQ
 ```
 
 ##### Response
@@ -124430,7 +124430,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2lmn86vn42kk0n6ttc0006d1
+x-request-id: 2lmmbnkm6ass0bb954000ck2
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__

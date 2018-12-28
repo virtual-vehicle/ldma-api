@@ -1,8 +1,7 @@
 version: '3'
 services:
   phoenix:
-    build:
-     context: .
+    image: 342857567033.dkr.ecr.us-east-2.amazonaws.com/ldma-api:latest
     environment:
       # Variables to connect to our Postgres server
       PGUSER: postgres
@@ -22,9 +21,7 @@ services:
        - backend
     
   processor:
-    build:
-      context: ./trip-event-database
-    # restart: unless-stopped
+    image: 342857567033.dkr.ecr.us-east-2.amazonaws.com/ldma-processor:latest
     environment:
       POSTGRES_PASSWORD: postgres
     depends_on:
@@ -41,7 +38,7 @@ services:
       POSTGRES_DB: tripdb
     command: postgres -c config_file=/etc/postgresql.conf
     volumes:
-      - ./trip-event-database/PostgresConfig/postgres_init:/docker-entrypoint-initdb.d/
+      - ./trip-event-database/PostgresConfig/postgres_init:/docker-entrypoint-initdb.d
       - ./trip-event-database/PostgresConfig/postgresql.conf:/etc/postgresql.conf
       - db_datadir:/var/lib/postgresql/data
     networks:

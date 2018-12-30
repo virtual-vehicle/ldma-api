@@ -1,0 +1,134 @@
+{
+    "AWSEBDockerrunVersion": 2,
+    "volumes": [
+        {
+            "name": "phoenix_app",
+            "host": {
+                "sourcePath": "/var/app/current"
+            }
+        },
+        {
+            "name": "Trip-Event-DatabasePostgresconfigPostgres_Init",
+            "host": {
+                "sourcePath": "/var/app/current/trip-event-database/PostgresConfig/postgres_init"
+            }
+        },
+        {
+            "name": "Trip-Event-DatabasePostgresconfigPostgresql_Conf",
+            "host": {
+                "sourcePath": "/var/app/current/trip-event-database/PostgresConfig/postgresql.conf"
+            }
+        },
+        {
+            "name": "Db_Datadir",
+            "host": {
+                "sourcePath": "db_datadir"
+            }
+        }
+    ],
+    "containerDefinitions": [
+        {
+            "name": "phoenix",
+            "image": "342857567033.dkr.ecr.us-east-2.amazonaws.com/ldma-api:latest",
+            "environment": [
+                {
+                    "name": "PGUSER",
+                    "value": "postgres"
+                },
+                {
+                    "name": "PGPASSWORD",
+                    "value": "postgres"
+                },
+                {
+                    "name": "PGDATABASE",
+                    "value": "tripdb"
+                },
+                {
+                    "name": "PGPORT",
+                    "value": "5432"
+                },
+                {
+                    "name": "PGHOST",
+                    "value": "tripeventdb"
+                }
+            ],
+            "essential": true,
+            "memory": 2048,
+            "mountPoints": [
+                {
+                    "sourceVolume": "phoenix_app",
+                    "containerPath": "/usr/src/app"
+                }
+            ],
+            "portMappings": [
+                {
+                    "containerPort": 4000,
+                    "hostPort": 80
+                }
+            ],
+            "links": [
+                "tripeventdb"
+            ]
+        },
+        {
+            "name": "processor",
+            "image": "342857567033.dkr.ecr.us-east-2.amazonaws.com/ldma-processor:latest",
+            "environment": [
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "value": "postgres"
+                }
+            ],
+            "essential": true,
+            "memory": 2048,
+            "links": [
+                "tripeventdb"
+            ]
+        },
+        {
+            "name": "tripeventdb",
+            "image": "timescale/timescaledb-postgis:latest-pg10",
+            "command": [
+                "postgres",
+                "-c",
+                "config_file=/etc/postgresql.conf"
+            ],
+            "environment": [
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "value": "postgres"
+                },
+                {
+                    "name": "POSTGRES_USER",
+                    "value": "postgres"
+                },
+                {
+                    "name": "POSTGRES_DB",
+                    "value": "tripdb"
+                }
+            ],
+            "essential": true,
+            "memory": 2048,
+            "mountPoints": [
+                {
+                    "containerPath": "/docker-entrypoint-initdb.d",
+                    "sourceVolume": "Trip-Event-DatabasePostgresconfigPostgres_Init"
+                },
+                {
+                    "containerPath": "/etc/postgresql.conf",
+                    "sourceVolume": "Trip-Event-DatabasePostgresconfigPostgresql_Conf"
+                },
+                {
+                    "containerPath": "/var/lib/postgresql/data",
+                    "sourceVolume": "Db_Datadir"
+                }
+            ],
+            "portMappings": [
+                {
+                    "containerPort": 5432,
+                    "hostPort": 17171
+                }
+            ]
+        }
+    ]
+}

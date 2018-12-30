@@ -12,7 +12,7 @@ services:
       PGHOST: tripeventdb
     ports:
       # Mapping the port to make the Phoenix app accessible outside of the container
-      - "4000:4000"
+      - "80:4000"
     depends_on:
       - tripeventdb
     volumes:

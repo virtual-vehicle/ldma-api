@@ -24,6 +24,12 @@
             "host": {
                 "sourcePath": "db_datadir"
             }
+        },
+        {
+            "name": "Datasets",
+            "host": {
+                "sourcePath": "datasets"
+            }
         }
     ],
     "containerDefinitions": [
@@ -77,6 +83,12 @@
                 {
                     "name": "POSTGRES_PASSWORD",
                     "value": "postgres"
+                }
+            ],
+            "mountPoints": [
+                {
+                    "containerPath": "/opt/ImportTool/Datasets",
+                    "sourceVolume": "Datasets"
                 }
             ],
             "essential": true,

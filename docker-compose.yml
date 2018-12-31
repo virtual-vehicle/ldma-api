@@ -27,6 +27,8 @@ services:
     depends_on:
       # The db container needs to be started before we start this container
       - tripeventdb
+    volumes:
+      - datasets:/opt/ImportTool/Datasets
     networks:
       - backend
       
@@ -48,6 +50,7 @@ services:
    
 volumes:
   db_datadir:
+  datasets:
 
 networks:
      backend:

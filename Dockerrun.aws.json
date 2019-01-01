@@ -91,7 +91,7 @@
                     "sourceVolume": "Datasets"
                 }
             ],
-            "essential": true,
+            "essential": false,
             "memory": 2048,
             "links": [
                 "tripeventdb"

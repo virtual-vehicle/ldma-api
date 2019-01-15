@@ -1,7 +1,9 @@
 version: '3'
 services:
   phoenix:
-    image: 342857567033.dkr.ecr.us-east-2.amazonaws.com/ldma-api:latest
+    # image: 342857567033.dkr.ecr.us-east-2.amazonaws.com/ldma-api:latest
+    build:
+      context: .
     environment:
       # Variables to connect to our Postgres server
       PGUSER: postgres
@@ -22,6 +24,8 @@ services:
     
   processor:
     image: 342857567033.dkr.ecr.us-east-2.amazonaws.com/ldma-processor:latest
+    # build:
+    #   context: ./trip-event-database
     environment:
       POSTGRES_PASSWORD: postgres
     depends_on:

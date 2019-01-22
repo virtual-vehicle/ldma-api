@@ -48,7 +48,7 @@ Then you can run tests with following command, which also updates API documentat
 
 ## API Documentation
 
-You can look at API documentation [here](https://gitlab2.v2c2.at/CIS/aegis_api/blob/develop/docs/api-v1.md).
+You can look at API documentation [here](https://github.com/nadzic/ldma-api/blob/develop/docs/api-v1.md).
 
 ## API Mocks Documentation
 

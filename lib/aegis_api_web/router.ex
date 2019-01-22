@@ -27,12 +27,13 @@ defmodule AegisApiWeb.Router do
   scope "/api/v1", AegisApiWeb do
     pipe_through [:api, :jwt_authenticated]
 
-    get "/trips", TripController, :show
+    resources "/trips", TripController
     get "/measurements", MeasurementController, :show
     get "/events", EventController, :show
     get "/drivers", DriverController, :show
     get "/rankings", RankingController, :show
-    get "/tripsinfo", TripsInfoController, :show
+    get "/trips_info", TripsInfoController, :show
+
   end
 
   scope "/", AegisApiWeb do

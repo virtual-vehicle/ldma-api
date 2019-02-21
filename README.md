@@ -1,6 +1,10 @@
 # LDMA api project
 
-LDMA API is Phoenix Elixir backend project, which is fetching data from aeigs database and providing RESTful APIs.
+LDMA API is Phoenix Elixir backend project, which is using same data as AEGIS project with some modification and providing RESTful APIs.
+
+## Project architecture
+
+![project architecture](https://raw.githubusercontent.com/nadzic/ldma-app/develop/diagram/draw-io-diagram.png?token=AF57yRb98XFWToGziDnpKQGj8XiH6d5Gks5cbpxnwA%3D%3D)
 
 ## Install dependencies
 
@@ -81,7 +85,7 @@ Linked services will be started, unless they are already running.
 
 `docker-compose up`
 
-## AWS 
+## AWS
 
 You can look at AWS documentation [here](https://docs.aws.amazon.com/).
 

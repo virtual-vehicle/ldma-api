@@ -24,12 +24,6 @@
             "host": {
                 "sourcePath": "db_datadir"
             }
-        },
-        {
-            "name": "Datasets",
-            "host": {
-                "sourcePath": "datasets"
-            }
         }
     ],
     "containerDefinitions": [
@@ -43,7 +37,7 @@
                 },
                 {
                     "name": "PGPASSWORD",
-                    "value": "postgres"
+                    "value": "Hc3spD5MxuNcXu2v9#-PwpMZTm"
                 },
                 {
                     "name": "PGDATABASE",
@@ -59,7 +53,7 @@
                 }
             ],
             "essential": true,
-            "memory": 2048,
+            "memory": 3570,
             "mountPoints": [
                 {
                     "sourceVolume": "phoenix_app",
@@ -77,29 +71,8 @@
             ]
         },
         {
-            "name": "processor",
-            "image": "342857567033.dkr.ecr.us-east-2.amazonaws.com/ldma-processor:latest",
-            "environment": [
-                {
-                    "name": "POSTGRES_PASSWORD",
-                    "value": "postgres"
-                }
-            ],
-            "mountPoints": [
-                {
-                    "containerPath": "/opt/ImportTool/Datasets",
-                    "sourceVolume": "Datasets"
-                }
-            ],
-            "essential": false,
-            "memory": 2048,
-            "links": [
-                "tripeventdb"
-            ]
-        },
-        {
             "name": "tripeventdb",
-            "image": "timescale/timescaledb-postgis:latest-pg10",
+            "image": "timescale/timescaledb-postgis:1.2.1-pg11",
             "command": [
                 "postgres",
                 "-c",
@@ -108,7 +81,7 @@
             "environment": [
                 {
                     "name": "POSTGRES_PASSWORD",
-                    "value": "postgres"
+                    "value": "Hc3spD5MxuNcXu2v9#-PwpMZTm"
                 },
                 {
                     "name": "POSTGRES_USER",
@@ -120,7 +93,7 @@
                 }
             ],
             "essential": true,
-            "memory": 2048,
+            "memory": 3570,
             "mountPoints": [
                 {
                     "containerPath": "/docker-entrypoint-initdb.d",

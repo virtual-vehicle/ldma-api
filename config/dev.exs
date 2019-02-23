@@ -69,7 +69,7 @@ config :phoenix, :plug_init_mode, :runtime
 # Configure your database
 config :aegis_api, AegisApi.Repo,
   username: "postgres",
-  password: "postgres",
+  password: "Hc3spD5MxuNcXu2v9#-PwpMZTm",
   database: "tripdb",
   hostname: "tripeventdb",
   pool_size: 8,

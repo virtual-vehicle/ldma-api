@@ -7,7 +7,6 @@ phases:
       - aws --version
       - $(aws ecr get-login --region $AWS_DEFAULT_REGION --no-include-email)
       - REPOSITORY_URI_API=342857567033.dkr.ecr.us-east-2.amazonaws.com/ldma-api
-      - REPOSITORY_URI_PROCESSOR=342857567033.dkr.ecr.us-east-2.amazonaws.com/ldma-processor
       - COMMIT_HASH=$(echo $CODEBUILD_RESOLVED_SOURCE_VERSION | cut -c 1-7)
       - IMAGE_TAG=${COMMIT_HASH:=latest}
   build:
@@ -16,17 +15,12 @@ phases:
       - echo Building the Docker image...          
       - docker build -t $REPOSITORY_URI_API:latest .
       - docker tag $REPOSITORY_URI_API:latest $REPOSITORY_URI_API:$IMAGE_TAG
-      - cd trip-event-database
-      - docker build -t $REPOSITORY_URI_PROCESSOR:latest .
-      - docker tag $REPOSITORY_URI_PROCESSOR:latest $REPOSITORY_URI_PROCESSOR:$IMAGE_TAG
   post_build:
     commands:
       - echo Build completed on `date`
       - echo Pushing the Docker images...
       - docker push $REPOSITORY_URI_API:latest
       - docker push $REPOSITORY_URI_API:$IMAGE_TAG
-      - docker push $REPOSITORY_URI_PROCESSOR:latest
-      - docker push $REPOSITORY_URI_PROCESSOR:$IMAGE_TAG
 artifacts:
     files:
       - '**/*'

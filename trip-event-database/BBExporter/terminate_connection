@@ -1,3 +1,0 @@
-echo 'temppwd' | sudo -S systemctl stop mysql
-sleep 2
-echo 'temppwd' | sudo -S poweroff

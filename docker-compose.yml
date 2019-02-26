@@ -7,7 +7,7 @@ services:
     environment:
       # Variables to connect to our Postgres server
       PGUSER: postgres
-      PGPASSWORD: postgres
+      PGPASSWORD: Hc3spD5MxuNcXu2v9#-PwpMZTm
       PGDATABASE: tripdb
       PGPORT: 5432
       # Hostname of our Postgres container
@@ -21,25 +21,11 @@ services:
       - .:/usr/src/app
     networks:
        - backend
-    
-  processor:
-    image: 342857567033.dkr.ecr.us-east-2.amazonaws.com/ldma-processor:latest
-    # build:
-    #   context: ./trip-event-database
-    environment:
-      POSTGRES_PASSWORD: postgres
-    depends_on:
-      # The db container needs to be started before we start this container
-      - tripeventdb
-    volumes:
-      - datasets:/opt/ImportTool/Datasets
-    networks:
-      - backend
       
   tripeventdb:
-    image: timescale/timescaledb-postgis:latest-pg10
+    image: timescale/timescaledb-postgis:1.2.1-pg11
     environment:
-      POSTGRES_PASSWORD: postgres
+      POSTGRES_PASSWORD: Hc3spD5MxuNcXu2v9#-PwpMZTm
       POSTGRES_USER: postgres
       POSTGRES_DB: tripdb
     command: postgres -c config_file=/etc/postgresql.conf
@@ -54,7 +40,6 @@ services:
    
 volumes:
   db_datadir:
-  datasets:
 
 networks:
      backend:

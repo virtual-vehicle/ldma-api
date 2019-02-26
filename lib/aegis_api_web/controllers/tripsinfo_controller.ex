@@ -10,7 +10,7 @@ defmodule AegisApiWeb.TripsInfoController do
   def show(conn, _params) do
     driver = Guardian.Plug.current_resource(conn)
     trips = AegisApi.Repo.one(from t in AegisApiWeb.Trip, where: t.driver_id == ^driver.driver_id, select: count(t))
-    events = AegisApi.Repo.one(from e in AegisApiWeb.Event, where: t.driver_id == ^driver.driver_id, select: count(e))
+    events = AegisApi.Repo.one(from e in AegisApiWeb.Event, where: e.driver_id == ^driver.driver_id, select: count(e))
     distance = AegisApi.Repo.one(from t in AegisApiWeb.Trip, where: t.driver_id == ^driver.driver_id, select: sum(t.distance))
     totaltime = AegisApi.Repo.one(from t in AegisApiWeb.Trip, where: t.driver_id == ^driver.driver_id, select: sum(t.duration))
     accelartions = AegisApi.Repo.one(from e in AegisApiWeb.Event, where: e.driver_id == ^driver.driver_id and e.event_type == "ACCELERATION", select: count(e))

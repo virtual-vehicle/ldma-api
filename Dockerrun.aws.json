@@ -20,6 +20,12 @@
             }
         },
         {
+            "name": "Trip-Event-Database_Backup",
+            "host": {
+                "sourcePath": "/var/app/current/trip-event-database/backup"
+            }
+        },
+        {
             "name": "Db_Datadir",
             "host": {
                 "sourcePath": "db_datadir"
@@ -102,6 +108,10 @@
                 {
                     "containerPath": "/etc/postgresql.conf",
                     "sourceVolume": "Trip-Event-DatabasePostgresconfigPostgresql_Conf"
+                },
+                {
+                    "containerPath": "/var/lib/postgresql/backup",
+                    "sourceVolume": "Trip-Event-Database_Backup"
                 },
                 {
                     "containerPath": "/var/lib/postgresql/data",

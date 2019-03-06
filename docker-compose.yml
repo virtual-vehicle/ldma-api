@@ -32,6 +32,7 @@ services:
     volumes:
       - ./trip-event-database/PostgresConfig/postgres_init:/docker-entrypoint-initdb.d
       - ./trip-event-database/PostgresConfig/postgresql.conf:/etc/postgresql.conf
+      - ./trip-event-database/backup:/var/lib/postgresql/backup
       - db_datadir:/var/lib/postgresql/data
     networks:
        - backend

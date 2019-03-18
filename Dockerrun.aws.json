@@ -10,19 +10,13 @@
         {
             "name": "Trip-Event-DatabasePostgresconfigPostgres_Init",
             "host": {
-                "sourcePath": "/var/app/current/trip-event-database/PostgresConfig/postgres_init"
+                "sourcePath": "/var/app/current/trip-event-database/docker/postgres/postgres_init"
             }
         },
         {
             "name": "Trip-Event-DatabasePostgresconfigPostgresql_Conf",
             "host": {
-                "sourcePath": "/var/app/current/trip-event-database/PostgresConfig/postgresql.conf"
-            }
-        },
-        {
-            "name": "Trip-Event-Database_Backup",
-            "host": {
-                "sourcePath": "/var/app/current/trip-event-database/backup"
+                "sourcePath": "/var/app/current/trip-event-database/docker/postgres/postgresql.conf"
             }
         },
         {
@@ -59,7 +53,7 @@
                 }
             ],
             "essential": true,
-            "memory": 3570,
+            "memory": 2658,
             "mountPoints": [
                 {
                     "sourceVolume": "phoenix_app",
@@ -77,8 +71,23 @@
             ]
         },
         {
+            "name": "processor",
+            "image": "342857567033.dkr.ecr.us-east-2.amazonaws.com/ldma-processor:latest",
+            "environment": [
+                {
+                    "name": "POSTGRES_PASSWORD",
+                    "value": "Hc3spD5MxuNcXu2v9#-PwpMZTm"
+                }
+            ],
+            "essential": false,
+            "memory": 2658,
+            "links": [
+                "tripeventdb"
+            ]
+        },
+        {
             "name": "tripeventdb",
-            "image": "timescale/timescaledb-postgis:1.2.1-pg11",
+            "image": "342857567033.dkr.ecr.us-east-2.amazonaws.com/ldma-database",
             "command": [
                 "postgres",
                 "-c",
@@ -99,7 +108,7 @@
                 }
             ],
             "essential": true,
-            "memory": 3570,
+            "memory": 2658,
             "mountPoints": [
                 {
                     "containerPath": "/docker-entrypoint-initdb.d",
@@ -108,10 +117,6 @@
                 {
                     "containerPath": "/etc/postgresql.conf",
                     "sourceVolume": "Trip-Event-DatabasePostgresconfigPostgresql_Conf"
-                },
-                {
-                    "containerPath": "/var/lib/postgresql/backup",
-                    "sourceVolume": "Trip-Event-Database_Backup"
                 },
                 {
                     "containerPath": "/var/lib/postgresql/data",

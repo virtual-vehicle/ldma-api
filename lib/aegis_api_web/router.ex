@@ -33,6 +33,7 @@ defmodule AegisApiWeb.Router do
     get "/drivers", DriverController, :show
     get "/rankings", RankingInfoController, :index
     get "/trips_info", TripsInfoController, :show
+    get "/graph_tripscore", GraphTripScoreController, :index
 
   end
 

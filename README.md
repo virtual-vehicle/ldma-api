@@ -4,7 +4,7 @@ LDMA API is Phoenix Elixir backend project, which is using same data as AEGIS pr
 
 ## Project architecture
 
-![project architecture](https://raw.githubusercontent.com/nadzic/ldma-api/develop/diagram/draw-io-diagram.png?token=AF57yXiye2sxSgKNhgTiTAqWaxGTCOlNks5cbqN6wA%3D%3D)
+![project architecture](https://github.com/nadzic/ldma-api/blob/develop/diagram/draw-io-diagram.png?raw=true)
 
 ## Install dependencies
 
@@ -36,7 +36,7 @@ Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
 
 ## Database diagram
 
-You can look at diagram [here](https://gitlab2.v2c2.at/CIS/aegis_api/raw/develop/dbdiagram/tripdb_schemas_diagram.png).
+You can look at diagram [here](https://github.com/nadzic/ldma-api/blob/develop/dbdiagram/tripdb_schemas_diagram.png).
 
 ## Running the API tests and regenrate API docs
 

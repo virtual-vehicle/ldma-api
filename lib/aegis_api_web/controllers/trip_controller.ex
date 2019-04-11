@@ -26,6 +26,7 @@ defmodule AegisApiWeb.TripController do
                       accelerations: type(^accelerations, :integer),
                       brakes: type(^brakes, :integer),
                       standstills: type(^standstills, :integer),
+                      map_visible: false,
                       risk_score: ts.risk_score})|> AegisApi.Repo.all()
     AegisApiWeb.Helper.pretty_json(conn, trips)
   end
@@ -57,6 +58,7 @@ defmodule AegisApiWeb.TripController do
                       accelerations: type(^accelerations, :integer),
                       brakes: type(^brakes, :integer),
                       standstills: type(^standstills, :integer),
+                      map_visible: false,
                       risk_score: ts.risk_score} )|> AegisApi.Repo.all()
     AegisApiWeb.Helper.pretty_json(conn, trips)
   end

@@ -2,9 +2,13 @@
 
 LDMA API is Phoenix Elixir backend project, which is using same data as AEGIS project with some modification and providing RESTful APIs.
 
-## Project architecture
+## Project Architecture
 
 ![project architecture](https://github.com/nadzic/ldma-api/blob/develop/diagram/draw-io-diagram.png?raw=true)
+
+## Backend Architecture
+
+![project architecture](https://github.com/nadzic/ldma-api/blob/develop/diagram/20190408-Marija-ArchitectureLDMA.png?raw=true)
 
 ## Install dependencies
 

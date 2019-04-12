@@ -15,7 +15,7 @@
 * __Path:__ /api/v1/events
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzMwNDUyNywiaWF0IjoxNTU0ODg1MzI3LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6IjdiZDJlNmMyLTVmYWQtNGQ5Zi04ZGQ4LTVhN2Y5MmM5YzRhNyIsIm5iZiI6MTU1NDg4NTMyNiwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.Mr3D0-ZBQNF0IZM6ZvqKE5-2PMIyTrIE-wiMzplPNaY0kuiEOSkTZgcXpU7cnGo-u_eMdvqN6MlzWz85rVO3vQ
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzQwODQ2NSwiaWF0IjoxNTU0OTg5MjY1LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6IjRhMWEzMGIzLWI4OWUtNGJiNC1iNjBhLWE5MjJmNTUzZTgzZCIsIm5iZiI6MTU1NDk4OTI2NCwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.nLVsi0e5-M4W0ZpDrBVul7oJqX-8XeC-Vj4xw8TotxqHNvT24n-wcuDKBE10psywk75-MxCWX0i6xCR7cbBffg
 ```
 
 ##### Response
@@ -23,7 +23,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2ma0vts4rf6o059d7c000313
+x-request-id: 2ma6svsjbpd813t49c001ot2
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__
@@ -5024,7 +5024,7 @@ content-type: application/json; charset=utf-8
 * __Path:__ /api/v1/rankings
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzMwNDUyNSwiaWF0IjoxNTU0ODg1MzI1LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6IjZlYTBjNGQ4LTYzMWItNGQxZi05MjM0LWFlOWJmYzdhZGEzMCIsIm5iZiI6MTU1NDg4NTMyNCwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.efkFkQnvGfa1I_AUz9gSMQmG_5mPzGQlzasJki3InY4AaDsooOJ44XouF-du77Rj72KgdMhAotttyZilXbF2ow
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzQwODQ2NCwiaWF0IjoxNTU0OTg5MjY0LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImJhNDkyZGIyLTc0MmItNDk3Yy05YzFkLTVjZTFmZjYwMDA0ZCIsIm5iZiI6MTU1NDk4OTI2Mywic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.1MPCwV1QqsQ8D80XkGHemGftye7HeKktAs5nfEiBcQILQPT0xAYHvcJp8-PCTGJohrcs7NTcWLNTzch0OyYAMw
 ```
 
 ##### Response
@@ -5032,7 +5032,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2ma0vtoshjm01h0cq00006o1
+x-request-id: 2ma6svppuolo08gqig001or2
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__
@@ -5091,7 +5091,7 @@ content-type: application/json; charset=utf-8
 * __Path:__ /api/v1/trips
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzMwNDUyOCwiaWF0IjoxNTU0ODg1MzI4LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImQ2OTA3NDgwLTZhNTMtNGU5NC1iMjNlLTE1MGU5MDAyMzE4MSIsIm5iZiI6MTU1NDg4NTMyNywic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.rKMYtW1-xPX5cIr4XATNS9Ezl4ezcJ2I3r-94lh7BzbwW72HkGw__8Wl4d3GH0HFxP-adFFpCwSeLN4adxiwPg
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzQwODQ2NywiaWF0IjoxNTU0OTg5MjY3LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImZjYWY4ZTFkLWY2OWEtNGU2ZS05YTExLTA1ZjBjNGU3NmY1ZCIsIm5iZiI6MTU1NDk4OTI2Niwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.9g74K4MGNB4p5PZPp8VWkPeyNACaXGjE0U75fb6RAPWsB18YR3XT71IeRoxxzKJ1yaUoK7dIQIBrLbJpeGzAbw
 ```
 
 ##### Response
@@ -5099,7 +5099,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2ma0vtvhq3f81mbdv40006q1
+x-request-id: 2ma6svvvbt3o16i184001be1
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__
@@ -5112,6 +5112,7 @@ content-type: application/json; charset=utf-8
     "start_at": "2019-03-28T09:41:14",
     "standstills": 11,
     "risk_score": 75,
+    "map_visible": false,
     "gps_track": {
       "srid": 4326,
       "properties": {},
@@ -5740,7 +5741,7 @@ content-type: application/json; charset=utf-8
 * __Path:__ /api/v1/trips
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzMwNDUyMiwiaWF0IjoxNTU0ODg1MzIyLCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImRlYTYwNDNmLTQ4MDUtNDBhMS04NzAzLWY4MzMxZTA3ODkyMiIsIm5iZiI6MTU1NDg4NTMyMSwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.Lr1A_i9Y8UdqrulNHEZlNRn9QrP8rygDdWYhVCIa313XVCBtaXmX3s-MYsgXzjpDwc2w33ImXQ4fHgMfnVo0fw
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzQwODQ2MSwiaWF0IjoxNTU0OTg5MjYxLCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImEyOTQyMTJiLWUwOWQtNDA1OS1hMzk3LWNkZTYzNmFlMDAwNCIsIm5iZiI6MTU1NDk4OTI2MCwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.sSrVznCiUKY3e_fhMYQ6SF6MYzuxfdQMjl7R3dIebIljBbIEIr_POzLKk_0lK5W63cfIk5ywjz-xTodFn9oZyQ
 ```
 
 ##### Response
@@ -5748,7 +5749,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2ma0vtk5m3mk0kp5500003c2
+x-request-id: 2ma6svlh1itk10cgn40010g4
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__
@@ -5761,6 +5762,7 @@ content-type: application/json; charset=utf-8
     "start_at": "2019-03-28T09:41:14",
     "standstills": 11,
     "risk_score": 75,
+    "map_visible": false,
     "gps_track": {
       "srid": 4326,
       "properties": {},

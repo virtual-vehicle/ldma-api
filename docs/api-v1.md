@@ -15,7 +15,7 @@
 * __Path:__ /api/v1/events
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzQwODQ2NSwiaWF0IjoxNTU0OTg5MjY1LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6IjRhMWEzMGIzLWI4OWUtNGJiNC1iNjBhLWE5MjJmNTUzZTgzZCIsIm5iZiI6MTU1NDk4OTI2NCwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.nLVsi0e5-M4W0ZpDrBVul7oJqX-8XeC-Vj4xw8TotxqHNvT24n-wcuDKBE10psywk75-MxCWX0i6xCR7cbBffg
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzgxNzMxMCwiaWF0IjoxNTU1Mzk4MTEwLCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6IjQwNTFkYWJkLWRjNWUtNDA3Zi04NDNlLWI0ODZkYjgzMjVhNiIsIm5iZiI6MTU1NTM5ODEwOSwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.4nzcJlbysEOaK7M014WQ5iZFv9cyHtOwhoc6Vlh29p1jdFIfbhMfiPvdNim-QPnQGsqr4D4e_avCVN3pV4WUBw
 ```
 
 ##### Response
@@ -23,7 +23,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2ma6svsjbpd813t49c001ot2
+x-request-id: 2mau4lq6r1vk15c138001h82
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__
@@ -5024,7 +5024,7 @@ content-type: application/json; charset=utf-8
 * __Path:__ /api/v1/rankings
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzQwODQ2NCwiaWF0IjoxNTU0OTg5MjY0LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImJhNDkyZGIyLTc0MmItNDk3Yy05YzFkLTVjZTFmZjYwMDA0ZCIsIm5iZiI6MTU1NDk4OTI2Mywic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.1MPCwV1QqsQ8D80XkGHemGftye7HeKktAs5nfEiBcQILQPT0xAYHvcJp8-PCTGJohrcs7NTcWLNTzch0OyYAMw
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzgxNzMxNSwiaWF0IjoxNTU1Mzk4MTE1LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6IjI1M2MyY2RiLTllYWItNDUxZi04NDlmLTIwNjg2N2M2YmExNCIsIm5iZiI6MTU1NTM5ODExNCwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.YbudvyeY5Q1YB4ASz02PZKaNZGUj2lPS9_bd38dElJA0X4RC5llnIbf9ApIlgN2ejYyOmJf83IoZ2y-Y7dutYg
 ```
 
 ##### Response
@@ -5032,7 +5032,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2ma6svppuolo08gqig001or2
+x-request-id: 2mau4m3b8ges1a016c001at1
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__
@@ -5091,7 +5091,7 @@ content-type: application/json; charset=utf-8
 * __Path:__ /api/v1/trips
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzQwODQ2NywiaWF0IjoxNTU0OTg5MjY3LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImZjYWY4ZTFkLWY2OWEtNGU2ZS05YTExLTA1ZjBjNGU3NmY1ZCIsIm5iZiI6MTU1NDk4OTI2Niwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.9g74K4MGNB4p5PZPp8VWkPeyNACaXGjE0U75fb6RAPWsB18YR3XT71IeRoxxzKJ1yaUoK7dIQIBrLbJpeGzAbw
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzgxNzMxMywiaWF0IjoxNTU1Mzk4MTEzLCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImY3Y2UxZWRjLTYwMzItNDU0MS05MmEwLTljZmU4MjNlOWUwYiIsIm5iZiI6MTU1NTM5ODExMiwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.mZ6QvBp2xRlb54f3C6Eddv6UoioD0OL483BDJSuch1X7I5wj-9o6ZEWf44axkM3iVDc59cE-iWhiKrg_Vsd-CQ
 ```
 
 ##### Response
@@ -5099,7 +5099,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2ma6svvvbt3o16i184001be1
+x-request-id: 2mau4lvi6m200m0tmk001ha2
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__
@@ -5741,7 +5741,7 @@ content-type: application/json; charset=utf-8
 * __Path:__ /api/v1/trips
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzQwODQ2MSwiaWF0IjoxNTU0OTg5MjYxLCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImEyOTQyMTJiLWUwOWQtNDA1OS1hMzk3LWNkZTYzNmFlMDAwNCIsIm5iZiI6MTU1NDk4OTI2MCwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.sSrVznCiUKY3e_fhMYQ6SF6MYzuxfdQMjl7R3dIebIljBbIEIr_POzLKk_0lK5W63cfIk5ywjz-xTodFn9oZyQ
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzgxNzMwNywiaWF0IjoxNTU1Mzk4MTA3LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImRkMTVkZjcwLThmNzAtNGMxMS05MjQ1LWVkZDg4MTNmOTRhMiIsIm5iZiI6MTU1NTM5ODEwNiwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.1d-gGcbIjDbJypBjZoelHvXVPmuXQxqyN7d8YMI2dNgu8iSoX219E4sGIiUj9inOG2Y4OCmnTxlJ5arYbsVfcw
 ```
 
 ##### Response
@@ -5749,7 +5749,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2ma6svlh1itk10cgn40010g4
+x-request-id: 2mau4lk2ah2g01mlq4001ap1
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__

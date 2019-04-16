@@ -11,6 +11,7 @@ defmodule AegisApiWeb.GraphTripScoreController do
       order_by: [desc: t.start_at],
       limit: 20,
       select: %{trip_id: t.trip_id, start_at: t.start_at, end_at: datetime_add(t.start_at, t.duration, "second"),risk_score: ts.risk_score}) |> AegisApi.Repo.all()
-    AegisApiWeb.Helper.pretty_json(conn, trip_score)
+
+    AegisApiWeb.Helper.pretty_json(conn, Enum.sort(trip_score))
   end
 end

@@ -15,7 +15,7 @@
 * __Path:__ /api/v1/events
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzgxNzMxMCwiaWF0IjoxNTU1Mzk4MTEwLCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6IjQwNTFkYWJkLWRjNWUtNDA3Zi04NDNlLWI0ODZkYjgzMjVhNiIsIm5iZiI6MTU1NTM5ODEwOSwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.4nzcJlbysEOaK7M014WQ5iZFv9cyHtOwhoc6Vlh29p1jdFIfbhMfiPvdNim-QPnQGsqr4D4e_avCVN3pV4WUBw
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzkwMjY5NCwiaWF0IjoxNTU1NDgzNDk0LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6IjVlYThmZThmLWFjNzgtNDFiNC05NWE5LTdlNjYwY2E5NDNkMiIsIm5iZiI6MTU1NTQ4MzQ5Mywic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.UiXwFi2rxPjRcUKBw5vuX4Y1QbQGgfKglEe3cJERakqsF5lvkH5TYPD66OF6uWGk4V1VctFzDQIg-YQ9G3ry1g
 ```
 
 ##### Response
@@ -23,7 +23,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2mau4lq6r1vk15c138001h82
+x-request-id: 2mb2vvp311b80aea8c001n91
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__
@@ -5024,7 +5024,7 @@ content-type: application/json; charset=utf-8
 * __Path:__ /api/v1/rankings
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzgxNzMxNSwiaWF0IjoxNTU1Mzk4MTE1LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6IjI1M2MyY2RiLTllYWItNDUxZi04NDlmLTIwNjg2N2M2YmExNCIsIm5iZiI6MTU1NTM5ODExNCwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.YbudvyeY5Q1YB4ASz02PZKaNZGUj2lPS9_bd38dElJA0X4RC5llnIbf9ApIlgN2ejYyOmJf83IoZ2y-Y7dutYg
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzkwMjY5NSwiaWF0IjoxNTU1NDgzNDk1LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImZmMWY0OGIxLWZkNWItNDdmNy05N2NjLWI1M2I2ZjIzZmIxNyIsIm5iZiI6MTU1NTQ4MzQ5NCwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.06ciJXu4HT_9z1mWcOssVyInozrKbCftO8OWlShZjdQDA_-DCzl4GzJidQ9XymUTIK09A3EAKr9-MiDJWrjPyA
 ```
 
 ##### Response
@@ -5032,52 +5032,52 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2mau4m3b8ges1a016c001at1
+x-request-id: 2mb2vvsgu65o0m0tmk001552
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__
 ```json
 [
   {
-    "driving_time": 52613.499999999985,
-    "driving_distance": 811141.9100386157,
-    "driver_score": "46.7400000000000000",
+    "driving_time": "877",
+    "driving_distance": "811",
+    "driver_score": "46.74",
     "driver_id": 1
   },
   {
-    "driving_time": 47038.79999999998,
-    "driving_distance": 438967.96454700216,
-    "driver_score": "31.2200000000000000",
+    "driving_time": "784",
+    "driving_distance": "439",
+    "driver_score": "31.22",
     "driver_id": 3
   },
   {
-    "driving_time": 49579.99999999999,
-    "driving_distance": 774457.4929763587,
-    "driver_score": "55.1800000000000000",
+    "driving_time": "826",
+    "driving_distance": "774",
+    "driver_score": "55.18",
     "driver_id": 5
   },
   {
-    "driving_time": 56382.799999999996,
-    "driving_distance": 910825.0672982193,
-    "driver_score": "46.5000000000000000",
+    "driving_time": "940",
+    "driving_distance": "911",
+    "driver_score": "46.50",
     "driver_id": 12
   },
   {
-    "driving_time": 44087.59999999999,
-    "driving_distance": 1078215.5168445862,
-    "driver_score": "69.5000000000000000",
+    "driving_time": "735",
+    "driving_distance": "1078",
+    "driver_score": "69.50",
     "driver_id": 13
   },
   {
-    "driving_time": 31675.6,
-    "driving_distance": 650498.3374537833,
-    "driver_score": "67.3000000000000000",
+    "driving_time": "528",
+    "driving_distance": "650",
+    "driver_score": "67.30",
     "driver_id": 14
   },
   {
-    "driving_time": 2329.2,
-    "driving_distance": 48049.0228096724,
-    "driver_score": "75.0000000000000000",
+    "driving_time": "39",
+    "driving_distance": "48",
+    "driver_score": "75.00",
     "driver_id": 16
   }
 ]
@@ -5091,7 +5091,7 @@ content-type: application/json; charset=utf-8
 * __Path:__ /api/v1/trips
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzgxNzMxMywiaWF0IjoxNTU1Mzk4MTEzLCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImY3Y2UxZWRjLTYwMzItNDU0MS05MmEwLTljZmU4MjNlOWUwYiIsIm5iZiI6MTU1NTM5ODExMiwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.mZ6QvBp2xRlb54f3C6Eddv6UoioD0OL483BDJSuch1X7I5wj-9o6ZEWf44axkM3iVDc59cE-iWhiKrg_Vsd-CQ
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzkwMjY5MiwiaWF0IjoxNTU1NDgzNDkyLCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImQ1YTM0OWU4LWMwZTAtNGMwZS05MjdjLTM5M2MzMjI5MDlmNCIsIm5iZiI6MTU1NTQ4MzQ5MSwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ._EEoopisIKaqRavegPlei2eUpXGH6Hx4Wg4nGsQWTwBGCbfXSu20ROIapyAk3Tuvz54Htl6b9YZFwTtIbrh16w
 ```
 
 ##### Response
@@ -5099,7 +5099,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2mau4lvi6m200m0tmk001ha2
+x-request-id: 2mb2vvlrlmcg15c138001n81
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__
@@ -5725,9 +5725,9 @@ content-type: application/json; charset=utf-8
     },
     "end_position_name": "Fürstenfelder Bundesstraße, 8263, Großwilfersdorf, Austria",
     "end_at": "2019-03-28T10:20:03",
-    "duration": 2329.2,
+    "duration": "39",
     "driver_id": 16,
-    "distance": 48049.0228096724,
+    "distance": "48",
     "brakes": 21,
     "beagle_id": 8,
     "accelerations": 34
@@ -5741,7 +5741,7 @@ content-type: application/json; charset=utf-8
 * __Path:__ /api/v1/trips
 * __Request headers:__
 ```
-authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzgxNzMwNywiaWF0IjoxNTU1Mzk4MTA3LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImRkMTVkZjcwLThmNzAtNGMxMS05MjQ1LWVkZDg4MTNmOTRhMiIsIm5iZiI6MTU1NTM5ODEwNiwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.1d-gGcbIjDbJypBjZoelHvXVPmuXQxqyN7d8YMI2dNgu8iSoX219E4sGIiUj9inOG2Y4OCmnTxlJ5arYbsVfcw
+authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0FwaSIsImV4cCI6MTU1NzkwMjY4NywiaWF0IjoxNTU1NDgzNDg3LCJpc3MiOiJBZWdpc0FwaSIsImp0aSI6ImZlYmUxYjFhLTU1MmYtNDY0YS1iNWJhLWFjYWMwZWQ2ZjZjNyIsIm5iZiI6MTU1NTQ4MzQ4Niwic3ViIjoiMTYiLCJ0eXAiOiJhY2Nlc3MifQ.uAitmxGV0J0x01DUZQsFp3wBs9hRhTaU2e8upoH8D4GkT-ASCQ2VDFB__AGohLem8HePknyTEXpuXMu56CCl2A
 ```
 
 ##### Response
@@ -5749,7 +5749,7 @@ authorization: Bearer eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJhdWQiOiJBZWdpc0Fwa
 * __Response headers:__
 ```
 cache-control: max-age=0, private, must-revalidate
-x-request-id: 2mau4lk2ah2g01mlq4001ap1
+x-request-id: 2mb2vvin231g01mlq4001n51
 content-type: application/json; charset=utf-8
 ```
 * __Response body:__
@@ -6375,9 +6375,9 @@ content-type: application/json; charset=utf-8
     },
     "end_position_name": "Fürstenfelder Bundesstraße, 8263, Großwilfersdorf, Austria",
     "end_at": "2019-03-28T10:20:03",
-    "duration": 2329.2,
+    "duration": "39",
     "driver_id": 16,
-    "distance": 48049.0228096724,
+    "distance": "48",
     "brakes": 21,
     "beagle_id": 8,
     "accelerations": 34

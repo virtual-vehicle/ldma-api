@@ -14,8 +14,8 @@ defmodule AegisApiWeb.TripController do
                       driver_id: t.driver_id,
                       start_position_name: t.start_position_name,
                       end_position_name: t.end_position_name,
-                      distance: t.distance,
-                      duration: t.duration,
+                      distance: (fragment("round(?::decimal / 1000)",t.distance)), # distance in km
+                      duration: (fragment("round(?::decimal / 60)",t.duration)), # duration in min
                       start_at: t.start_at,
                       end_at: datetime_add(t.start_at, t.duration, "second"),
                       gps_track: t.simplified_gps_track,
@@ -42,8 +42,8 @@ defmodule AegisApiWeb.TripController do
                       driver_id: t.driver_id,
                       start_position_name: t.start_position_name,
                       end_position_name: t.end_position_name,
-                      distance: t.distance,
-                      duration: t.duration,
+                      distance: (fragment("round(?::decimal / 1000)",t.distance)), # distance in km
+                      duration: (fragment("round(?::decimal / 60)",t.duration)), # duration in min
                       start_at: t.start_at,
                       end_at: datetime_add(t.start_at, t.duration, "second"),
                       gps_track: t.simplified_gps_track,

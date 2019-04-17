@@ -5,8 +5,8 @@ defmodule AegisApiWeb.TripsInfoController do
   def show(conn, _params) do
     driver = Guardian.Plug.current_resource(conn)
     trips = AegisApi.Repo.one(from t in AegisApiWeb.Trip, where: t.driver_id == ^driver.driver_id, select: count(t))
-    distance = AegisApi.Repo.one(from t in AegisApiWeb.Trip, where: t.driver_id == ^driver.driver_id, select: sum(t.distance)) |> Float.round(2)
-    totaltime = AegisApi.Repo.one(from t in AegisApiWeb.Trip, where: t.driver_id == ^driver.driver_id, select: sum(t.duration)) |> Float.round(2)
+    distance = AegisApi.Repo.one(from t in AegisApiWeb.Trip, where: t.driver_id == ^driver.driver_id, select: (fragment("round(?::decimal / 1000)",sum(t.distance)))) # distance in km
+    totaltime = AegisApi.Repo.one(from t in AegisApiWeb.Trip, where: t.driver_id == ^driver.driver_id, select: (fragment("round(?::decimal / 60)", sum(t.duration)))) # totaltime in min
     accelartions = AegisApi.Repo.one(from e in AegisApiWeb.Event, where: e.driver_id == ^driver.driver_id and e.event_type == "ACCELERATION", select: count(e))
     brakes = AegisApi.Repo.one(from e in AegisApiWeb.Event, where: e.driver_id == ^driver.driver_id and e.event_type == "BRAKE", select: count(e))
     standstills = AegisApi.Repo.one(from e in AegisApiWeb.Event, where: e.driver_id == ^driver.driver_id and e.event_type == "STANDSTILL", select: count(e))

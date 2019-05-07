@@ -17,7 +17,7 @@ defmodule AegisApi.HelperTest do
 
   def create_jwt_for_driver do
     # get a driver
-    driver = from(d in AegisApiWeb.Driver, limit: 1) |> AegisApi.Repo.one()
+    driver = from(d in AegisApiWeb.Driver, where: d.driver_id==16) |> AegisApi.Repo.one()
 
     # create the token
     {:ok, token, _claims} = AegisApiWeb.Driver.token_sign_in(driver.username, "password")

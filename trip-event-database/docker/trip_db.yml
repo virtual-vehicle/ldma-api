@@ -1,0 +1,39 @@
+version: '3'
+services:
+    
+  processor:
+    build:
+      context: ..
+      dockerfile: docker/analytics_processor/Dockerfile
+    depends_on:
+      - tripeventdb
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PWD:?"postgres password not set"}
+    networks:
+      - backend
+      
+  tripeventdb:
+    build:
+      context: postgres
+    shm_size: 65g
+    environment:
+      POSTGRES_PASSWORD: ${POSTGRES_PWD:?"postgres password not set"}
+      POSTGRES_USER: postgres
+      POSTGRES_DB: tripdb
+    command: postgres -c config_file=/etc/postgresql.conf
+    volumes:
+      - ./postgres/postgres_init/:/docker-entrypoint-initdb.d/
+      - ./postgres/postgresql.conf:/etc/postgresql.conf
+      - db_datadir:/var/lib/postgresql/data
+    networks:
+      - backend
+    ports: 
+      - 9001:5432
+   
+volumes:
+  db_datadir:
+
+networks:
+  backend:
+    driver: bridge

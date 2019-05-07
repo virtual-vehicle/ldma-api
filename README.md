@@ -90,7 +90,6 @@ Linked services will be started, unless they are already running.
 You can look at AWS documentation [here](https://docs.aws.amazon.com/).
 
 For AWS deployment you can read:
-- AWS CodeCommit Repository [here](https://docs.aws.amazon.com/codecommit/latest/userguide/how-to-create-repository.html)
 - Continuous Deployment with AWS CodePipeline [here](https://docs.aws.amazon.com/AmazonECS/latest/developerguide/ecs-cd-pipeline.html)
 - Getting Started Using Elastic Beanstalk [here](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.html)
 

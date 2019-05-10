@@ -10,7 +10,10 @@ defmodule AegisApiWeb.GraphTripScoreController do
       where: t.driver_id == ^driver.driver_id,
       order_by: [desc: t.start_at],
       limit: 20,
-      select: %{trip_id: t.trip_id, start_at: t.start_at, end_at: datetime_add(t.start_at, t.duration, "second"),risk_score: ts.risk_score}) |> AegisApi.Repo.all()
+      select: %{trip_id: t.trip_id,
+                start_at: (fragment("select ? at time zone 'utc' at time zone 'europe/vienna' ", t.start_at)),
+                end_at: datetime_add((fragment("select ? at time zone 'utc' at time zone 'europe/vienna' ", t.start_at)), t.duration, "second"),
+                risk_score: ts.risk_score}) |> AegisApi.Repo.all()
 
     AegisApiWeb.Helper.pretty_json(conn, Enum.sort(trip_score))
   end

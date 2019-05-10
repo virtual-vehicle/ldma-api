@@ -16,8 +16,8 @@ defmodule AegisApiWeb.TripController do
                       end_position_name: t.end_position_name,
                       distance: (fragment("round(?::decimal / 1000)",t.distance)), # distance in km
                       duration: (fragment("round(?::decimal / 60)",t.duration)), # duration in min
-                      start_at: t.start_at,
-                      end_at: datetime_add(t.start_at, t.duration, "second"),
+                      start_at: (fragment("select ? at time zone 'utc' at time zone 'europe/vienna' ", t.start_at)),
+                      end_at: datetime_add((fragment("select ? at time zone 'utc' at time zone 'europe/vienna' ", t.start_at)), t.duration, "second"),
                       gps_track: t.simplified_gps_track,
                       accelerations: (fragment("(select count(*) from trip_data.event_t e where e.trip_id=? and e.event_type = 'ACCELERATION')",t.trip_id)),
                       brakes: (fragment("(select count(*) from trip_data.event_t e where e.trip_id=? and e.event_type = 'BRAKE')",t.trip_id)),
@@ -44,8 +44,8 @@ defmodule AegisApiWeb.TripController do
                       end_position_name: t.end_position_name,
                       distance: (fragment("round(?::decimal / 1000)",t.distance)), # distance in km
                       duration: (fragment("round(?::decimal / 60)",t.duration)), # duration in min
-                      start_at: t.start_at,
-                      end_at: datetime_add(t.start_at, t.duration, "second"),
+                      start_at: (fragment("select ? at time zone 'utc' at time zone 'europe/vienna' ", t.start_at)),
+                      end_at: datetime_add((fragment("select ? at time zone 'utc' at time zone 'europe/vienna' ", t.start_at)), t.duration, "second"),
                       gps_track: t.simplified_gps_track,
                       accelerations: (fragment("(select count(*) from trip_data.event_t e where e.trip_id=? and e.event_type = 'ACCELERATION')",t.trip_id)),
                       brakes: (fragment("(select count(*) from trip_data.event_t e where e.trip_id=? and e.event_type = 'BRAKE')",t.trip_id)),

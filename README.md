@@ -98,3 +98,7 @@ For AWS deployment you can read:
 - Getting Started Using Elastic Beanstalk [here](https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/GettingStarted.html)
 
 You can visit [`http://ldma.us-east-2.elasticbeanstalk.com`](http://ldma.us-east-2.elasticbeanstalk.com) from your browser.
+
+## Confluence
+
+Confluence page can be found [here] [`https://confluence.v2c2.at/pages/viewpage.action?pageId=46792730`]

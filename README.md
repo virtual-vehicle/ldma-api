@@ -54,7 +54,7 @@ Then you can run tests with following command, which also updates API documentat
 
 `mix test`
 
-## API Documentation
+## API Documentationaa
 
 You can look at API documentation [here](https://github.com/nadzic/ldma-api/blob/develop/docs/api-v1.md).
 

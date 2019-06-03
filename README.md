@@ -62,7 +62,6 @@ You can look at API documentation [here](https://github.com/nadzic/ldma-api/blob
 
 You can look at API Mocks documentation [here](https://app.apiary.io/aegisproject).
 
-
 ### ExCoveralls - report tool for Elixir
 
 We are using ExCoveralls, an Elixir library that reports test coverage statistics. It uses Erlang's cover to generate coverage information, and posts the test coverage results to coveralls.io through the json API.
